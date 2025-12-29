@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observation</title>
+
+    <style>
+      /* ===============================
+         🤍 WHITE INTRIGUE PAGE
+         Clean • Premium • ReKongo
+      =============================== */
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-soft: #eef2f7;
+        --primary: #38bdf8;
+        --primary-dark: #0284c7;
+        --text-main: #020617;
+        --text-muted: #475569;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: radial-gradient(
+          circle at top,
+          var(--bg-soft) 0%,
+          var(--bg-main) 55%,
+          #ffffff 100%
+        );
+        color: var(--text-main);
+        overflow: hidden;
+      }
+
+      /* subtle paper grain */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(2, 6, 23, 0.025),
+          rgba(2, 6, 23, 0.025) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+        pointer-events: none;
+        opacity: 0.12;
+      }
+
+      /* center container */
+      .center {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+      }
+
+      /* main text */
+      .message {
+        font-size: clamp(1.9rem, 4vw, 3.1rem);
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        line-height: 1.45;
+        color: var(--text-main);
+        text-shadow: 0 8px 28px rgba(2, 6, 23, 0.08);
+        animation: fadeIn 1.5s ease forwards;
+      }
+
+      /* underline accent */
+      .message::after {
+        content: "";
+        display: block;
+        width: 72px;
+        height: 3px;
+        margin: 26px auto 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--primary),
+          transparent
+        );
+        opacity: 0.85;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="center">
+      <div class="message">
+        Si tu es ici,<br />
+        ça veut dire que tu observes.
+      </div>
+    </div>
+  </body>
+</html>
